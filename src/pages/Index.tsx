@@ -4,11 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
+import Cart, { CartItem } from "@/components/Cart";
 import { useState } from "react";
 
 const Index = () => {
   const [cartOpen, setCartOpen] = useState(false);
-  const [cartItems, setCartItems] = useState<number>(0);
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   const desserts = [
     {
@@ -86,9 +87,37 @@ const Index = () => {
     }
   ];
 
-  const addToCart = () => {
-    setCartItems(cartItems + 1);
+  const addToCart = (dessert: typeof desserts[0]) => {
+    setCartItems(prevItems => {
+      const existingItem = prevItems.find(item => item.id === dessert.id);
+      if (existingItem) {
+        return prevItems.map(item => 
+          item.id === dessert.id 
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      }
+      return [...prevItems, { ...dessert, quantity: 1 }];
+    });
   };
+
+  const updateQuantity = (id: number, quantity: number) => {
+    setCartItems(prevItems =>
+      prevItems.map(item =>
+        item.id === id ? { ...item, quantity } : item
+      )
+    );
+  };
+
+  const removeItem = (id: number) => {
+    setCartItems(prevItems => prevItems.filter(item => item.id !== id));
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
+  const totalCartItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <div className="min-h-screen bg-background">
@@ -110,12 +139,12 @@ const Index = () => {
             variant="outline" 
             size="icon"
             className="relative"
-            onClick={() => setCartOpen(!cartOpen)}
+            onClick={() => setCartOpen(true)}
           >
             <Icon name="ShoppingCart" size={20} />
-            {cartItems > 0 && (
+            {totalCartItems > 0 && (
               <Badge className="absolute -top-2 -right-2 h-5 w-5 flex items-center justify-center p-0 text-xs">
-                {cartItems}
+                {totalCartItems}
               </Badge>
             )}
           </Button>
@@ -136,7 +165,7 @@ const Index = () => {
                 От 180 ккал и только натуральные ингредиенты.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="text-lg" onClick={addToCart}>
+                <Button size="lg" className="text-lg" onClick={() => setCartOpen(true)}>
                   <Icon name="ShoppingBag" size={20} className="mr-2" />
                   Сделать заказ
                 </Button>
@@ -221,7 +250,7 @@ const Index = () => {
                   </p>
                   <div className="flex items-center justify-between pt-2">
                     <span className="text-2xl font-bold text-primary">{dessert.price} ₽</span>
-                    <Button onClick={addToCart}>
+                    <Button onClick={() => addToCart(dessert)}>
                       <Icon name="Plus" size={16} className="mr-1" />
                       В корзину
                     </Button>
@@ -515,6 +544,15 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      <Cart 
+        open={cartOpen}
+        onOpenChange={setCartOpen}
+        items={cartItems}
+        onUpdateQuantity={updateQuantity}
+        onRemoveItem={removeItem}
+        onClearCart={clearCart}
+      />
     </div>
   );
 };
