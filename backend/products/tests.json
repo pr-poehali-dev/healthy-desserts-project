@@ -1,0 +1,32 @@
+{
+  "tests": [
+    {
+      "name": "Get all products",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "0": {
+          "id": "string",
+          "name": "string",
+          "price": "number"
+        }
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get product by ID",
+      "method": "GET",
+      "path": "/?id=1",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "id": "string",
+        "name": "string",
+        "nutrition": {
+          "calories": "number"
+        }
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
