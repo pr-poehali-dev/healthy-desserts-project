@@ -230,13 +230,13 @@ const Home = () => {
 
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12 space-y-4">
               <Badge>О нас</Badge>
               <h2 className="text-4xl md:text-5xl font-bold">Наша миссия</h2>
             </div>
             
-            <Card>
+            <Card className="mb-12">
               <CardContent className="p-8 space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   <strong className="text-foreground">Делаем кофе и ПП‑десерты так, чтобы было реально вкусно.</strong>
@@ -249,6 +249,33 @@ const Home = () => {
                 </p>
               </CardContent>
             </Card>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { emoji: "✅", title: "Прозрачный состав", description: "КБЖУ и ингредиенты на каждой позиции", bg: "from-emerald-50 to-green-50" },
+                { emoji: "🌱", title: "Натурально и вкусно", description: "Цельнозерновая мука, греческий йогурт, свежие ягоды", bg: "from-lime-50 to-emerald-50" },
+                { emoji: "⚡", title: "Быстрая сборка", description: "Только из наличия, готовим за 15 минут", bg: "from-amber-50 to-yellow-50" },
+                { emoji: "🎯", title: "Польза без вреда", description: "Без сахара, искусственных добавок и консервантов", bg: "from-sky-50 to-blue-50" }
+              ].map((item, index) => (
+                <Card 
+                  key={index} 
+                  className={`border-none shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br ${item.bg} animate-fade-in`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardContent className="p-6 text-center space-y-3">
+                    <div className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                      {item.emoji}
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground leading-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
