@@ -151,7 +151,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     category: 'combo',
     description: 'Капучино + Черничный чизкейк',
     price: 520,
-    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/80bb6fc2-2814-4720-8247-41d360c6172d.jpg',
+    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/8dd2bb6e-c98b-4aac-afd0-243b8f3fd2b7.jpg',
     ingredients: 'См. состав капучино и черничного чизкейка',
     nutrition: {
       calories: 275,
