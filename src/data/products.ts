@@ -90,7 +90,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     category: 'drinks',
     description: 'Классический капучино на миндальном молоке',
     price: 220,
-    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/f1055de5-4d98-4179-8918-07e452860055.jpg',
+    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/ee7f652b-8d42-40c6-bf6f-e316025be835.jpg',
     ingredients: 'Эспрессо, миндальное молоко',
     nutrition: {
       calories: 95,
