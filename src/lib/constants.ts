@@ -1,6 +1,6 @@
 export const BUSINESS_INFO = {
-  name: 'ПП-Кофейня',
-  address: 'г. Москва, ул. Примерная, д. 10',
+  name: 'Clean Cake',
+  address: 'Москва, самовывоз и доставка по городу',
   phone: '+7 (495) 123-45-67',
   email: 'info@pp-coffee.ru',
   workingHours: 'Ежедневно 08:00–22:00',

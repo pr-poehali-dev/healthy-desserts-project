@@ -124,7 +124,7 @@ const Delivery = () => {
                         <Icon name="MapPin" size={28} className="text-primary" />
                       </div>
                       <h3 className="font-semibold">Адрес</h3>
-                      <p className="text-sm text-muted-foreground">Москва, ул. Примерная, д. 10</p>
+                      <p className="text-sm text-muted-foreground">Москва, самовывоз и доставка по городу</p>
                     </CardContent>
                   </Card>
                   

@@ -43,13 +43,9 @@ const Contacts = () => {
                       <Icon name="MapPin" size={24} className="text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg mb-1">Адрес кофейни</h3>
+                      <h3 className="font-semibold text-lg mb-1">Доставка и самовывоз</h3>
                       <p className="text-muted-foreground">{BUSINESS_INFO.address}</p>
                       <p className="text-muted-foreground text-sm mt-2">{BUSINESS_INFO.workingHours}</p>
-                      <Button variant="outline" size="sm" className="mt-3">
-                        <Icon name="Navigation" size={16} className="mr-2" />
-                        Построить маршрут
-                      </Button>
                     </div>
                   </div>
                 </CardContent>
