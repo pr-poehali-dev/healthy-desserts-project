@@ -110,7 +110,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     category: 'drinks',
     description: 'Нежный латте на овсяном молоке без сахара',
     price: 240,
-    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/8348df95-6912-44bb-bc32-8baed1990336.jpg',
+    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/83f55f3b-374a-4bca-9840-6da1e0196440.jpg',
     ingredients: 'Эспрессо, овсяное молоко',
     nutrition: {
       calories: 110,
