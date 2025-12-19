@@ -131,7 +131,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     category: 'drinks',
     description: 'Японский зеленый чай матча с кокосовым молоком',
     price: 280,
-    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/cbfb7939-978a-4ed4-8e6c-f1cfda53c5a6.jpg',
+    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/afc5763d-b73b-480e-bd0a-e58426a8a41c.jpg',
     ingredients: 'Чай матча, кокосовое молоко, стевия',
     nutrition: {
       calories: 120,
