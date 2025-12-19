@@ -113,6 +113,45 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 space-y-4">
+            <Badge className="mb-2">Категории</Badge>
+            <h2 className="text-4xl md:text-5xl font-bold">Выберите категорию</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Торты, пирожные, наборы и напитки — всё с понятным составом
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: "Торты", icon: "Cake", gradient: "from-rose-400/20 to-pink-500/20", iconColor: "text-rose-500" },
+              { name: "Пирожные", icon: "Cookie", gradient: "from-amber-400/20 to-orange-500/20", iconColor: "text-amber-600" },
+              { name: "Наборы", icon: "Gift", gradient: "from-purple-400/20 to-violet-500/20", iconColor: "text-purple-500" },
+              { name: "Кофе и напитки", icon: "Coffee", gradient: "from-yellow-400/20 to-amber-500/20", iconColor: "text-yellow-700" }
+            ].map((category, index) => (
+              <Link 
+                key={category.name} 
+                to="/menu"
+                className="group animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <Card className={`h-full overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br ${category.gradient}`}>
+                  <CardContent className="p-8 flex flex-col items-center justify-center space-y-6 h-64">
+                    <div className={`bg-background/80 backdrop-blur-sm p-6 rounded-3xl shadow-md group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                      <Icon name={category.icon as any} size={56} className={`${category.iconColor} group-hover:scale-110 transition-transform duration-500`} />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground group-hover:scale-105 transition-transform duration-300">
+                      {category.name}
+                    </h3>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
