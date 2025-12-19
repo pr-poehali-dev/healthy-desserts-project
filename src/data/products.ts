@@ -49,7 +49,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     category: 'desserts',
     description: 'Хрустящее тесто с кремом из греческого йогурта и свежими ягодами',
     price: 380,
-    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/cbfb7939-978a-4ed4-8e6c-f1cfda53c5a6.jpg',
+    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/e7eff80e-e045-4f61-a092-92a6ffb12ea6.jpg',
     ingredients: 'Миндальная мука, греческий йогурт, свежая малина, голубика, эритрит, яйца, сливочное масло',
     nutrition: {
       calories: 195,
@@ -70,7 +70,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     category: 'desserts',
     description: 'Ароматный кекс с морковью, орехами и корицей',
     price: 290,
-    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/f1055de5-4d98-4179-8918-07e452860055.jpg',
+    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/66fe6f0e-9800-4397-81bc-d484f3b9bea4.jpg',
     ingredients: 'Морковь свежая, овсяная мука, грецкие орехи, яйца, кокосовое масло, корица, стевия',
     nutrition: {
       calories: 210,
