@@ -7,7 +7,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     category: 'desserts',
     description: 'Нежный творожный десерт с черникой на овсяной основе',
     price: 350,
-    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/f1055de5-4d98-4179-8918-07e452860055.jpg',
+    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/3fd09adf-0fc3-41a1-abd9-0a5734ef5892.jpg',
     ingredients: 'Творог обезжиренный, овсяные хлопья, черника свежая, яйца, греческий йогурт, эритрит, ванилин',
     nutrition: {
       calories: 180,
