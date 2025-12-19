@@ -151,7 +151,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     category: 'combo',
     description: 'Капучино + Черничный чизкейк',
     price: 520,
-    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/f1055de5-4d98-4179-8918-07e452860055.jpg',
+    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/80bb6fc2-2814-4720-8247-41d360c6172d.jpg',
     ingredients: 'См. состав капучино и черничного чизкейка',
     nutrition: {
       calories: 275,
@@ -172,7 +172,7 @@ export const SAMPLE_PRODUCTS: Product[] = [
     category: 'combo',
     description: 'Латте + Шоколадный брауни',
     price: 510,
-    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/8348df95-6912-44bb-bc32-8baed1990336.jpg',
+    image: 'https://cdn.poehali.dev/projects/0a10f257-8540-43f3-9040-8eb08412cb99/files/c37bbf86-9e76-4a45-a3fe-bf04b667d58d.jpg',
     ingredients: 'См. состав латте и шоколадного брауни',
     nutrition: {
       calories: 330,
